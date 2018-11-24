@@ -28,7 +28,7 @@
         <a class="icon-4"></a>
         <a class="icon-5" :style="down" @click="next"></a>
       </div>
-      <Catalog v-show="show" :red="red" @close="closeDetail"></Catalog>
+      <Catalog v-show="show" :red="red" @close="closeDetail" @childindex="childindex"></Catalog>
     </div>
   </div>
 </template>
@@ -53,6 +53,9 @@
       }
     },
     methods: {
+      childindex(val) {
+        this.index = val
+      },
       showToggle() {
         this.isShow = !this.isShow
       },
