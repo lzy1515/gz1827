@@ -1,7 +1,7 @@
 <template>
   <div class="catalog">
     <ul>
-      <li v-for="(hot,index) in red.chapters" :key="index" @click="$emit('close');text(hot)">{{hot.title}}</li>
+      <li v-for="(hot,index) in red.chapters" :key="index" @click="$emit('close');indexs(index)">{{hot.title}}</li>
     </ul>
   </div>
 </template>
@@ -11,9 +11,8 @@
   export default{
     props: ['red'],
     methods: {
-      text(det) {
-//        this.$router.push({name: 'reads', params: {id: det}})
-        console.log(det)
+      indexs(det) {
+        this.$emit('childindex', det)
       }
     }
   }
