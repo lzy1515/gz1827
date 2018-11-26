@@ -13,19 +13,19 @@
   </p>
   <div class="tab">
     <div class="tab-item" >
-      <router-link to="/synthesize">综合</router-link>
+      <router-link to="/synthesize"><span>综合</span></router-link>
     </div>
     <div class="tab-item">
-      <router-link to="/man">男生</router-link>
+      <router-link to="/man"><span>男生</span></router-link>
     </div>
     <div class="tab-item">
-      <router-link to="/woman">女生</router-link>
+      <router-link to="/woman"><span>女生</span></router-link>
     </div>
     <div class="tab-item">
-      <router-link to="/publish">出版</router-link>
+      <router-link to="/publish"><span>出版</span></router-link>
     </div>
     <div class="tab-item">
-      <router-link to="/monthly">包月</router-link>
+      <router-link to="/monthly"><span>包月</span></router-link>
     </div>
   </div>
   <ul>
@@ -202,6 +202,9 @@
           &.active
             color: #fff
             font-weight: 600
+            span
+              padding-bottom: 3px
+              border-bottom: 2px solid #fff
     ul
       overflow: hidden
       display: flex
